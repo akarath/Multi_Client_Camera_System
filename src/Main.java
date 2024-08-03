@@ -31,8 +31,8 @@ public class Main {
             executor.submit(() -> {
                 System.out.println("Client " + clientId + " is about to submit a request with urgency ");
                 client.submitCaptureRequest(
-                        image -> System.out.println("Client " + clientId + " Success: " + image + " with urgency " + client.getUrgency()),
-                        error -> System.out.println("Client " + clientId + " Failure: " + error + " with urgency " + client.getUrgency())
+                        image -> System.out.println(" -- CALL BACK -- Client " + clientId + " Success: " + image + " with urgency " + client.getUrgency()),
+                        error -> System.out.println(" -- CALL BACK -- Client " + clientId + " Failure: " + error + " with urgency " + client.getUrgency())
                 );
             });
         }
